@@ -1,19 +1,19 @@
 ## Acunetix API
 
-#Create Acunetix
+# Create Acunetix
 ```python
 
 acu = Acunetix(username,password,url,False)
 print("Is logged?: {} ".format(acu.is_logged()))
 
 ```
-#Get target
+# Get target
 
 ```python
 pprint(acu.get_targets())
 ```
 
-#PoC
+# PoC
 ```python
 target="42e9892c-3ce0-4cdb-808e-3d9811dd774f"
 if(target):
