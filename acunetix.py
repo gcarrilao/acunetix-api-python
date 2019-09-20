@@ -3,7 +3,6 @@ import urllib3
 import json
 import hashlib
 import re
-from config import *
 from pprint import pprint
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -31,7 +30,7 @@ class Acunetix ():
 		url_login = "{}/me/login".format(self.fullhost)
 		sha256_password =  hashlib.sha256(password.encode()).hexdigest()
 		js = {
-			"email" : username,
+			"email" : email,
 			"password": sha256_password,
 			"remember_me" : False,
 			"logout_previous": True,
@@ -44,9 +43,7 @@ class Acunetix ():
 		    'Accept-Language': "es-AR,es;q=0.8,en-US;q=0.5,en;q=0.3",
 		    'Accept-Encoding': "gzip, deflate, br",
 		    'Referer': "https://acunetix.dpsit.gba.gob.ar:3443/",
-		    'Content-Length': "153",
 		    'Connection': "keep-alive",
-		    'Cookie': "_ga=GA1.3.945176592.1553791927; _gid=GA1.3.2146349946.1554986015",
 		    'Content-Type': "application/json",
 		    'cache-control': "no-cache",
 		    }

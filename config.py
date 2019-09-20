@@ -1,4 +1,3 @@
-url="https://acunetix-host:port"
-username="email@email.com"
+username="mail@mail.com"
 password="password"
-
+host="https://acunetixhost:3443"
