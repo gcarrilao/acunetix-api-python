@@ -86,6 +86,20 @@ class Acunetix ():
 	def get_results(self,scan,session_id):
 		r = self.__get_request("/scans/{}/results/{}/vulnerabilities".format(scan,session_id))
 		return(json.loads(r.text))
+	# def get result with cursor
+	def get_results_with_cursor(self,scan,session_id,cursor):
+		r = self.__get_request("/scans/{}/results/{}/vulnerabilities?c={}".format(scan,session_id,cursor))
+		return(json.loads(r.text))
+	# def all result
+	def get_all_results(self,scan,session_id):
+		all_result={}
+		all_result["vulnerabilities"] = []
+		cursor = "0"
+		while (cursor is not None):
+			r = self.get_results_with_cursor(scan,session_id,cursor)
+			all_result["vulnerabilities"]= all_result["vulnerabilities"] + r["vulnerabilities"]
+			cursor= r["pagination"]["next_cursor"]
+		return all_result
 	#get last scan from a target
 	def get_last_scan_from_target(self,target):
 		r = self.get_target(target)
@@ -111,4 +125,3 @@ class Acunetix ():
 			if(p.match(i["description"])):
 				name_targets.append(i)
 		return name_targets
-

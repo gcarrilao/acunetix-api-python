@@ -1,3 +1,3 @@
-username="mail@mail.com"
-password="password"
+username="mail"
+password="passwd"
 host="https://acunetixhost:3443"
