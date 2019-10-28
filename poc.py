@@ -1,6 +1,5 @@
 from config import *
-from acunetix import *
-
+from pyacunetix import *
 
 acu = Acunetix(username,password,host,False)
 
