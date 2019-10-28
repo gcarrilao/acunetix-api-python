@@ -8,7 +8,7 @@ setuptools.setup(
 
      name='pyacunetix',  
 
-     version='1.0',
+     version='1.1',
 
      author="Guillermo Federico Carrilao Avila",
 

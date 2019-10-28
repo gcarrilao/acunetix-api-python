@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pyacunetix
-Version: 1.0
+Version: 1.1
 Summary: A wrapper between python and acunetix
 Home-page: https://github.com/gcarrilao/acunetix-api-python
 Author: Guillermo Federico Carrilao Avila
