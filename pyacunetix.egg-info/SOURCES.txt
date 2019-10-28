@@ -1,0 +1,7 @@
+README.md
+setup.py
+pyacunetix/__init__.py
+pyacunetix.egg-info/PKG-INFO
+pyacunetix.egg-info/SOURCES.txt
+pyacunetix.egg-info/dependency_links.txt
+pyacunetix.egg-info/top_level.txt
