@@ -37,12 +37,10 @@ class Acunetix ():
 		}
 		payload = json.dumps(js)
 		headers = {
-		    'Host': "acunetix.dpsit.gba.gob.ar:3443",
 		    'User-Agent': "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0",
 		    'Accept': "application/json, text/plain, */*",
 		    'Accept-Language': "es-AR,es;q=0.8,en-US;q=0.5,en;q=0.3",
 		    'Accept-Encoding': "gzip, deflate, br",
-		    'Referer': "https://acunetix.dpsit.gba.gob.ar:3443/",
 		    'Connection': "keep-alive",
 		    'Content-Type': "application/json",
 		    'cache-control': "no-cache",
